@@ -1,0 +1,8 @@
+FROM  golang:1.19
+EXPOSE 8080
+CMD ["main"]
+ADD . /src
+WORKDIR /src
+RUN go test --cover
+RUN go build -o /usr/local/bin/main
+RUN chmod +x /usr/local/bin/main
