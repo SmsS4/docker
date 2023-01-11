@@ -18,5 +18,5 @@ func main() {
 func HelloHandler(res http.ResponseWriter, req *http.Request) {
 	res.WriteHeader(http.StatusOK)
 	res.Header().Set("Content-Type", "application/json")
-	io.WriteString(res, `{"fancy-demo": false}`)
+	io.WriteString(res, `{"fancy-demo": true}`)
 }
